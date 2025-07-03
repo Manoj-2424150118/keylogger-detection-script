@@ -3,7 +3,7 @@
 [![Python Version](https://img.shields.io/badge/python-3.6%2B-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/yourusername/keylogger-detection-script.svg)](https://github.com/yourusername/keylogger-detection-script/issues)
+[![GitHub Issues](https://img.shields.io/github/issues/Manoj-2424150118/keylogger-detection-script.svg)](https://github.com/Manoj-2424150118/keylogger-detection-script/issues)
 
 A comprehensive Python script for detecting potential keylogger threats on your system. This tool performs multi-layered scanning to identify suspicious processes, files, registry entries, network connections, and system hooks that may indicate keylogger activity.
 
@@ -45,7 +45,7 @@ Hooks detected: 0
 
 SUSPICIOUS FILES:
 
-Path: C:\Users\Manoj\Keylogger_detection_script.py
+Path: C:\Users\XYZ\Keylogger_detection_script.py
 Size: 16824 bytes
 Modified: 2025-07-03T14:57:30.218745
 Reason: Suspicious filename pattern
@@ -62,7 +62,7 @@ Review the findings above and take appropriate action if threats are detected.
 
 1. **Download the script**
    ```bash
-   git clone https://github.com/yourusername/keylogger-detection-script.git
+   git clone https://github.com/Manoj-2424150118/keylogger-detection-script.git
    cd keylogger-detection-script
 
 Install dependencies
@@ -80,7 +80,7 @@ sudo python Keylogger_Detection_Script.py  # Linux/macOS
 Alternative Installation
 Direct download and run:
 bash# Download just the main script
-wget https://raw.githubusercontent.com/yourusername/keylogger-detection-script/main/Keylogger_Detection_Script.py
+wget https://raw.githubusercontent.com/Manoj-2424150118/keylogger-detection-script/main/Keylogger_Detection_Script.py
 
 # Install dependencies
 pip install psutil requests python-dateutil colorama
