@@ -236,6 +236,12 @@ Email: sharmamanojkumar697@gmail.com
 
 ## requirements.txt
 
+> A ready-to-use `requirements.txt` is included in this repo — install with
+> `pip install -r requirements.txt`. It lists the runtime dependencies the
+> script actually imports (`psutil`, plus `pywin32` on Windows). The fuller
+> block below additionally documents the original install notes and optional
+> development tools.
+
 ```txt
 # Core dependencies for keylogger detection
 psutil>=5.6.0
