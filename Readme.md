@@ -83,7 +83,7 @@ bash# Download just the main script
 wget https://raw.githubusercontent.com/Manoj-2424150118/keylogger-detection-script/main/Keylogger_Detection_Script.py
 
 # Install dependencies
-pip install psutil requests python-dateutil colorama
+pip install psutil pywin32
 
 # Run
 python Keylogger_Detection_Script.py
@@ -162,10 +162,10 @@ Effectiveness depends on system privileges and access rights
 The script requires these Python packages:
 
 psutil - System and process monitoring
-requests - Network requests (optional)
-python-dateutil - Date/time utilities
-colorama - Colored terminal output
-winreg - Windows registry access (Windows only)
+pywin32 - Windows API access (win32api, win32con, win32process, win32security; Windows only)
+winreg - Windows registry access (standard library, Windows only)
+
+Everything else the script uses (os, sys, hashlib, time, json, datetime, pathlib) is Python standard library - no other packages are required.
 
 📝 Troubleshooting
 Common Issues
@@ -174,7 +174,7 @@ bash# Run with elevated privileges
 sudo python Keylogger_Detection_Script.py
 Missing Dependencies:
 bash# Install all required packages
-pip install psutil requests python-dateutil colorama
+pip install psutil pywin32
 High False Positive Rate:
 
 Review the suspicious files list carefully
@@ -238,18 +238,17 @@ Email: sharmamanojkumar697@gmail.com
 
 > A ready-to-use `requirements.txt` is included in this repo — install with
 > `pip install -r requirements.txt`. It lists the runtime dependencies the
-> script actually imports (`psutil`, plus `pywin32` on Windows). The fuller
-> block below additionally documents the original install notes and optional
-> development tools.
+> script actually imports (`psutil`, plus `pywin32` on Windows). The block
+> below mirrors it. Older versions of this README also listed `requests`,
+> `python-dateutil` and `colorama` - the script does not import them, so they
+> have been removed. The development tools at the bottom of the block are
+> optional and are not needed to run the script.
 
 ```txt
 # Core dependencies for keylogger detection
 psutil>=5.6.0
-requests>=2.20.0
-python-dateutil>=2.8.0
-colorama>=0.4.0
 
-# Windows-specific (optional)
+# Windows-specific (required on Windows)
 pywin32>=223; sys_platform == "win32"
 
 # Development and testing (optional)
