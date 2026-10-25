@@ -116,7 +116,10 @@ sudo python Keylogger_Detection_Script.py  # Linux/macOS
 Missing Dependencies
 Problem: ModuleNotFoundError for required packages
 Solution:
-bashpip install psutil requests python-dateutil colorama
+```bash
+pip install psutil pywin32
+```
+(pywin32 is Windows-only; psutil is the only other third-party import -- see requirements.txt.)
 Slow Performance
 Problem: Script takes very long to complete
 Causes:
