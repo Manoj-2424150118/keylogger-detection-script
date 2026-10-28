@@ -9,7 +9,6 @@
 python Keylogger_Detection_Script.py
 
 # With administrator privileges (recommended)
-sudo python Keylogger_Detection_Script.py  # Linux/macOS
 # Right-click "Run as Administrator" on Windows
 What Happens During Scan
 
@@ -111,7 +110,6 @@ Reporting dashboards
 **Solution**: 
 ```bash
 # Run with administrator privileges
-sudo python Keylogger_Detection_Script.py  # Linux/macOS
 # Right-click and "Run as Administrator" on Windows
 Missing Dependencies
 Problem: ModuleNotFoundError for required packages
@@ -164,11 +162,8 @@ Problem: Registry scanning fails
 Solution: Ensure script runs as Administrator
 Problem: Windows Defender blocks script
 Solution: Add exception for the script file
-Linux/macOS-Specific Issues
-Problem: Cannot access system directories
-Solution: Run with sudo privileges
-Problem: Registry scanning error
-Note: Registry scanning is Windows-only, error is expected
+Non-Windows Systems
+Note: The script is Windows-only and exits on Linux/macOS (see `main()` in `Keylogger_detection_script.py`) — it does not run there, so there are no Linux/macOS troubleshooting steps. Run it on Windows as Administrator.
 Performance Optimization
 Reducing Scan Time
 

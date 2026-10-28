@@ -2,7 +2,7 @@
 
 [![Python Version](https://img.shields.io/badge/python-3.6%2B-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg)]()
+[![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)]()
 [![GitHub Issues](https://img.shields.io/github/issues/Manoj-2424150118/keylogger-detection-script.svg)](https://github.com/Manoj-2424150118/keylogger-detection-script/issues)
 
 A comprehensive Python script for detecting potential keylogger threats on your system. This tool performs multi-layered scanning to identify suspicious processes, files, registry entries, network connections, and system hooks that may indicate keylogger activity.
@@ -17,7 +17,7 @@ A comprehensive Python script for detecting potential keylogger threats on your 
   - Network connection analysis
   - System hooks detection
 - **Detailed JSON Reports**: Comprehensive scan results with timestamps
-- **Cross-Platform**: Works on Windows, Linux, and macOS
+- **Windows-only**: Built for Windows — registry and system-hook checks use Windows APIs, and the script exits on other platforms
 - **Admin Privilege Support**: Enhanced scanning with elevated permissions
 - **Real-time Progress**: Visual feedback during scanning process
 
@@ -73,7 +73,6 @@ bash# Basic usage
 python Keylogger_Detection_Script.py
 
 # With administrator privileges (recommended)
-sudo python Keylogger_Detection_Script.py  # Linux/macOS
 # Run as Administrator on Windows
 
 
@@ -171,7 +170,7 @@ Everything else the script uses (os, sys, hashlib, time, json, datetime, pathlib
 Common Issues
 Permission Denied Errors:
 bash# Run with elevated privileges
-sudo python Keylogger_Detection_Script.py
+# Right-click and "Run as Administrator" on Windows
 Missing Dependencies:
 bash# Install all required packages
 pip install psutil pywin32
@@ -194,11 +193,9 @@ Registry scanning requires administrator privileges
 Some system files may be protected and inaccessible
 Windows Defender may flag the script (false positive)
 
-Linux/macOS:
+Other platforms:
 
-Root privileges needed for full system access
-Some system directories may require special permissions
-Registry scanning is skipped on non-Windows systems
+The script is Windows-only and exits on non-Windows systems (see `main()` in `Keylogger_detection_script.py`) — there is no Linux/macOS mode, and registry scanning is not "skipped", the script does not run there at all.
 
 🤝 Contributing
 Found a bug or want to improve the script?
@@ -210,15 +207,15 @@ Submit Improvements: Fork and create a pull request
 Development Guidelines
 
 Keep the single-file architecture
-Maintain cross-platform compatibility
+Keep the Windows-only scope (the script exits on non-Windows systems)
 Add comments for complex logic
-Test on multiple operating systems
+Test on Windows
 
 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 🙏 Acknowledgments
 
-Built with Python for cross-platform compatibility
+Built with Python for Windows system inspection
 Inspired by cybersecurity best practices
 Thanks to the open-source community for tools and libraries
 
