@@ -238,8 +238,7 @@ Email: sharmamanojkumar697@gmail.com
 > script actually imports (`psutil`, plus `pywin32` on Windows). The block
 > below mirrors it. Older versions of this README also listed `requests`,
 > `python-dateutil` and `colorama` - the script does not import them, so they
-> have been removed. The development tools at the bottom of the block are
-> optional and are not needed to run the script.
+> have been removed.
 
 ```txt
 # Core dependencies for keylogger detection
@@ -248,7 +247,4 @@ psutil>=5.6.0
 # Windows-specific (required on Windows)
 pywin32>=223; sys_platform == "win32"
 
-# Development and testing (optional)
-pytest>=6.0.0
-black>=21.0.0
-flake8>=3.8.0
+```
